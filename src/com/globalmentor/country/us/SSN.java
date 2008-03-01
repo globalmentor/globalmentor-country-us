@@ -1,4 +1,20 @@
-package com.garretwilson.country.us;
+/*
+ * Copyright © 1996-2008 GlobalMentor, Inc. <http://www.globalmentor.com/>
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+package com.globalmentor.country.us;
 
 import static com.globalmentor.java.Integers.*;
 import static com.globalmentor.java.Objects.*;
@@ -8,8 +24,6 @@ import java.util.regex.Pattern;
 
 import com.garretwilson.text.ArgumentSyntaxException;
 import com.globalmentor.java.Integers;
-import com.globalmentor.java.Objects;
-import com.globalmentor.util.Debug;
 
 /**Encapsulation of a United States Social Security Number (SSN).
 <p>A Social Security Number is a nine-digit number composed a of three groups:</p>
@@ -41,7 +55,6 @@ public class SSN
 	/**A regular expression pattern matching a SSN in the form "XXXXXXXXX" or "XXX-XX-XXXX".
 	Three regular expression groups (1, 2, and 3; or 4, 5, and 6; depending on format) are formed representing the area number, the group number, and the serial number. 
 	*/
-//TODO del when works	public final Pattern PATTERN=Pattern.compile("(\\d{3})(?:(?:\\-(\\d{2})\\-(\\d{4}))|(?:(\\d{2})(\\d{4})))");
 	public final static Pattern PATTERN=Pattern.compile("(?:(\\d{3})(\\d{2})(\\d{4}))|(?:(\\d{3})\\-(\\d{2})\\-(\\d{4}))");
 	
 	/**The area number.*/
