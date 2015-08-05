@@ -194,7 +194,7 @@ public class SSN {
 	 * @return A string in the form "XXX-XX-XXXX" representing this social security number.
 	 */
 	public String toString() {
-		return getCanonicalString(); //returnthe canonical string
+		return getCanonicalString(); //return the canonical string
 	}
 
 }
