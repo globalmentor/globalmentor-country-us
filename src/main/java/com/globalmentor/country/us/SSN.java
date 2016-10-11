@@ -16,8 +16,9 @@
 
 package com.globalmentor.country.us;
 
-import static com.globalmentor.java.Objects.*;
 import static com.globalmentor.java.Conditions.*;
+
+import static java.util.Objects.*;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -130,7 +131,7 @@ public class SSN {
 	 * @throws ArgumentSyntaxException if the serial number is 0000.
 	 */
 	public SSN(final CharSequence ssn) throws ArgumentSyntaxException {
-		final Matcher matcher = PATTERN.matcher(checkInstance(ssn, "Social security number cannot be null.")); //create a matcher from the SSN pattern
+		final Matcher matcher = PATTERN.matcher(requireNonNull(ssn, "Social security number cannot be null.")); //create a matcher from the SSN pattern
 		if(matcher.matches()) { //if the SSN matches the pattern
 			final int groupDelta = matcher.group(1) != null ? 0 : 3; //see if we should use the first or second set of groups
 			areaNumber = Integer.parseInt(matcher.group(1 + groupDelta)); //save the area number
