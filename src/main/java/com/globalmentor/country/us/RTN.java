@@ -16,8 +16,9 @@
 
 package com.globalmentor.country.us;
 
-import static com.globalmentor.java.Objects.*;
 import static com.globalmentor.java.Conditions.*;
+
+import static java.util.Objects.*;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -155,7 +156,7 @@ public class RTN {
 	 * @throws ArgumentSyntaxException if the first two digits are not recognized as a valid category ID.
 	 */
 	public RTN(final CharSequence rtn) throws ArgumentSyntaxException {
-		final Matcher matcher = PATTERN.matcher(checkInstance(rtn, "Routing transit number cannot be null.")); //create a matcher from the RTN pattern
+		final Matcher matcher = PATTERN.matcher(requireNonNull(rtn, "Routing transit number cannot be null.")); //create a matcher from the RTN pattern
 		if(matcher.matches()) { //if the RTN matches the pattern
 			categoryID = Integer.parseInt(matcher.group(1)); //extract the category ID value
 			if(getCategory(categoryID) == null) { //if we don't recognize the category
