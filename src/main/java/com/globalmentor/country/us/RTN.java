@@ -1,11 +1,11 @@
 /*
- * Copyright © 1996-2008 GlobalMentor, Inc. <http://www.globalmentor.com/>
+ * Copyright © 1996-2008 GlobalMentor, Inc. <https://www.globalmentor.com/>
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
- *     http://www.apache.org/licenses/LICENSE-2.0
+ *     https://www.apache.org/licenses/LICENSE-2.0
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -33,7 +33,7 @@ import com.globalmentor.text.ArgumentSyntaxException;
  * </p>
  * <p>
  * A RTN is accepted in the form "AAAGGSSSS" or "AAA-GG-SSSS".
- * @see <a href="http://en.wikipedia.org/wiki/Routing_number">Wikipedia: Routing Transit Number</a>
+ * @see <a href="https://en.wikipedia.org/wiki/ABA_routing_transit_number">Wikipedia: ABA Routing Transit Number</a>
  * @see <a href="http://www.brainjar.com/js/validation/">Brain Jar.com: Validation Algorithms</a>
  * @author Garret Wilson
  */
@@ -41,7 +41,21 @@ public class RTN {
 
 	/** The institution category of the RTN, based upon its first two digits. */
 	public enum Category {
-		US_GOVERNMENT(00, false), PRIMARY(01, true), THRIFT(21, true), ELECTRONIC(61, true), TRAVELERS_CHEQUE(80, false);
+
+		/** US government */
+		US_GOVERNMENT(00, false),
+
+		/** Primary */
+		PRIMARY(01, true),
+
+		/** Thrift */
+		THRIFT(21, true),
+
+		/** Electronic */
+		ELECTRONIC(61, true),
+
+		/** Traveler's check */
+		TRAVELERS_CHEQUE(80, false);
 
 		/**
 		 * The base ID of this category. Some categories may not have more than one category ID besides the base.
@@ -84,7 +98,7 @@ public class RTN {
 	public static final Pattern PATTERN = Pattern.compile("(\\d{2})\\d{7}");
 
 	/** The weights used in calculating the checksum of an RTN. */
-	public static final int[] CHECKSUM_WEIGHTS = new int[] { 3, 7, 1, 3, 7, 1, 3, 7, 1 };
+	public static final int[] CHECKSUM_WEIGHTS = new int[] {3, 7, 1, 3, 7, 1, 3, 7, 1};
 
 	/** The ID value indicating the category and optionally reserve bank. */
 	private final int categoryID;

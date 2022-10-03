@@ -1,11 +1,11 @@
 /*
- * Copyright © 1996-2008 GlobalMentor, Inc. <http://www.globalmentor.com/>
+ * Copyright © 1996-2008 GlobalMentor, Inc. <https://www.globalmentor.com/>
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
- *     http://www.apache.org/licenses/LICENSE-2.0
+ *     https://www.apache.org/licenses/LICENSE-2.0
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -19,33 +19,45 @@ package com.globalmentor.country.us;
 /**
  * Districts of the Federal Reserve banking system in the United States. The districts are in increasing order of number/letter.
  * @author Garret Wilson
- * @see <a href="http://www.federalreserve.gov/otherfrb.htm">Federal Reserve Board: Federal Reserve Districts and Banks</a>
- * @see <a href="http://en.wikipedia.org/wiki/Federal_Reserve_Bank">Wikipedia: Federal Reserve</a>
+ * @see <a href="https://www.federalreserve.gov/aboutthefed/federal-reserve-system.htm">Federal Reserve Board: Federal Reserve Districts and Banks</a>
+ * @see <a href="https://en.wikipedia.org/wiki/Federal_Reserve_Bank">Wikipedia: Federal Reserve</a>
  */
 public enum FederalReserveDistrict {
 
+	/** Boston */
 	BOSTON,
 
+	/** New York */
 	NEW_YORK,
 
+	/** Philadelphia */
 	PHILADELPHIA,
 
+	/** Cleveland */
 	CLEVELAND,
 
+	/** Richmond */
 	RICHMOND,
 
+	/** Atlanta */
 	ATLANTA,
 
+	/** Chicago */
 	CHICAGO,
 
+	/** St. Louis */
 	ST_LOUIS,
 
+	/** Minneapolis */
 	MINNEAPOLIS,
 
+	/** Kansas City */
 	KANSAS_CITY,
 
+	/** Dallas */
 	DALLAS,
 
+	/** San Francisco */
 	SAN_FRANCISCO;
 
 	/** @return The identifying number of this federal reserve district. */
@@ -57,4 +69,5 @@ public enum FederalReserveDistrict {
 	public char getLetter() {
 		return (char)('A' + ordinal()); //the bank letters are in order starting with 'A'
 	}
+
 }

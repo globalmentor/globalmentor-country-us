@@ -1,11 +1,11 @@
 /*
- * Copyright © 1996-2008 GlobalMentor, Inc. <http://www.globalmentor.com/>
+ * Copyright © 1996-2008 GlobalMentor, Inc. <https://www.globalmentor.com/>
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
- *     http://www.apache.org/licenses/LICENSE-2.0
+ *     https://www.apache.org/licenses/LICENSE-2.0
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -38,8 +38,8 @@ import com.globalmentor.text.ArgumentSyntaxException;
  * </ol>
  * <p>
  * A SSN is accepted in the form "AAAGGSSSS" or "AAA-GG-SSSS".
- * @see <a href="http://en.wikipedia.org/wiki/Social_security_number">Wikipedia: Social Security Number</a>
- * @see <a href="http://www.ssa.gov/history/ssn/geocard.html">The SSN Numbering Scheme</a>
+ * @see <a href="https://en.wikipedia.org/wiki/Social_Security_number">Wikipedia: Social Security Number</a>
+ * @see <a href="https://www.ssa.gov/history/ssn/geocard.html">The SSN Numbering Scheme</a>
  * @author Garret Wilson
  */
 public class SSN {
